@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1710509281077,
+      "tag": "0000_strange_shape",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1710509459613,
+      "tag": "0001_parched_lord_hawal",
+      "breakpoints": true
+    }
+  ]
+}
