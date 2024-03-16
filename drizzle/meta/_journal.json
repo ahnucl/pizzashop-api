@@ -15,6 +15,20 @@
       "when": 1710509459613,
       "tag": "0001_parched_lord_hawal",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1710612775906,
+      "tag": "0002_empty_marvel_zombies",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1710612861087,
+      "tag": "0003_spotty_bedlam",
+      "breakpoints": true
     }
   ]
 }
