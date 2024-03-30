@@ -36,7 +36,7 @@ export const sendAuthLink = new Elysia().post(
 
     // Enviar um e-mail - Em prod: Resend
     // Mailtrap - Teste de envio de e-mail - integra com nodemailer e outras libs
-    const authLink = new URL('/auth-links/authenticate', env.API_BASE_URL)
+    const authLink = new URL('/auth-link/authenticate', env.API_BASE_URL)
 
     authLink.searchParams.set('code', authLinkCode)
     authLink.searchParams.set('redirect', env.AUTH_REDIRECT_URL)
