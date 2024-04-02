@@ -10,18 +10,18 @@ export const authenticateFromLink = new Elysia().use(auth).get(
   async ({ query, set, signUser }) => {
     const { code, redirect } = query
 
-    const authLinkFormCode = await db.query.authLinks.findFirst({
+    const authLinkFromCode = await db.query.authLinks.findFirst({
       where(fields, { eq }) {
         return eq(fields.code, code)
       },
     })
 
-    if (!authLinkFormCode) {
+    if (!authLinkFromCode) {
       throw new Error('Auth link not found.')
     }
 
     const daysSinceAuthLinkWasCreated = dayjs().diff(
-      authLinkFormCode.createdAt,
+      authLinkFromCode.createdAt,
       'days',
     )
 
@@ -31,12 +31,12 @@ export const authenticateFromLink = new Elysia().use(auth).get(
 
     const managedRestaurant = await db.query.restaurants.findFirst({
       where(fields, { eq }) {
-        return eq(fields.managerId, authLinkFormCode.userId)
+        return eq(fields.managerId, authLinkFromCode.userId)
       },
     })
 
     await signUser({
-      sub: authLinkFormCode.userId,
+      sub: authLinkFromCode.userId,
       restaurantId: managedRestaurant?.id,
     })
 
