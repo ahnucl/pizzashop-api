@@ -43,6 +43,13 @@
       "when": 1712240776661,
       "tag": "0005_first_the_fallen",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1712321004434,
+      "tag": "0006_aberrant_blackheart",
+      "breakpoints": true
     }
   ]
 }
